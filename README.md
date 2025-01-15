@@ -30,6 +30,11 @@ wget https://downloads.apache.org/kafka/3.8.0/kafka_2.13-3.8.0.tgz
 Then extract it
 ```bash
 tar -xvzf kafka_2.13-3.8.0.tgz
+```
+```bash
 mv kafka_2.13-3.5.0 kafka
 ```
-
+Get into the folder we just created
+```bash
+cd kafka
+```
