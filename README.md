@@ -38,3 +38,16 @@ Get into the folder we just created
 ```bash
 cd kafka
 ```
+
+Edit the server.properties file to allow all external traffic
+```bash
+nano config/server.properties
+```
+Find these lines and edit them according to your details. You can come back to this later if you want to limit the listening.
+```bash
+# Listens on all IP addresses
+listeners=PLAINTEXT://0.0.0.0:9092
+
+# Advertises your public EC2 IP to external clients
+advertised.listeners=PLAINTEXT://<your-ec2-public-ip>:9092
+```
