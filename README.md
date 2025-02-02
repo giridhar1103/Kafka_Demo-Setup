@@ -38,6 +38,10 @@ Get into the folder that we just extracted:
 ```bash
 cd kafka
 ```
+To edit the server.properties file, you need root access. Which can be done by:
+```bash
+sudo su
+```
 
 Edit the server.properties file to allow all external traffic
 ```bash
