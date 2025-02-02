@@ -20,6 +20,10 @@ To double check if you have installed:
 ```bash
 java -version
 ```
+I will be demonstrating kafka with the help of python so we will install kafka-python to communicate with the brokers.
+```bash
+pip install kafka-python
+```
 
 Now let's install kafka:
 Go to https://downloads.apache.org/kafka/ and find the desired version of kafka.
