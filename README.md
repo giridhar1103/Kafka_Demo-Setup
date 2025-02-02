@@ -1,5 +1,6 @@
 # Kafka_Demo-Setup
 A basic repo to demonstrate kafka setup.
+To have a clear and sound understanding about Kafka, read this medium written by Emre Akın: https://medium.com/@cobch7/what-is-kafka-9cc8591d2063 
 
 ## On EC2 instances
 I have used the t2 micro (free trial) to demonstrate the setup.
