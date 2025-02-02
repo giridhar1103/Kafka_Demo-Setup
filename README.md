@@ -34,7 +34,7 @@ tar -xvzf kafka_2.13-3.8.0.tgz
 ```bash 
 mv kafka_2.13-3.5.0 kafka
 ```
-Get into the folder we just created
+Get into the folder that we just extracted:
 ```bash
 cd kafka
 ```
@@ -45,9 +45,12 @@ nano config/server.properties
 ```
 Find these lines and edit them according to your details. You can come back to this later if you want to limit the listening.
 ```bash
-# Listens on all IP addresses
+#Using this we can listen on all IP addresses
 listeners=PLAINTEXT://0.0.0.0:9092
 
-# Advertises your public EC2 IP to external clients
+#Advertises your public EC2 IP address to external clients
 advertised.listeners=PLAINTEXT://<your-ec2-public-ip>:9092
 ```
+Note: You need to change this IP address everytime you stop or terminate your AWS EC2 instance. Which means you have to repeat this step everytime you stop/terminate or create a new instance as IP addresses are dyinamic in AWS EC2. 
+An alternative to this would be, using the Elastic IP address which remains constant no matter what you do with your EC2 instance (You can even assign it to different instances). But this does not come under the AWS free tier as of 2025. 
+
