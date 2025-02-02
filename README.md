@@ -47,7 +47,8 @@ Find these lines and edit them according to your details. You can come back to t
 ```bash
 #Using this we can listen on all IP addresses
 listeners=PLAINTEXT://0.0.0.0:9092
-
+```
+```bash
 #Advertises your public EC2 IP address to external clients
 advertised.listeners=PLAINTEXT://<your-ec2-public-ip>:9092
 ```
