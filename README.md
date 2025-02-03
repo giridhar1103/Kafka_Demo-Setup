@@ -132,7 +132,7 @@ for message in consumer:
     print(f"Received: {message.value.decode('utf-8')}")
 ```
 
-Troubleshooting common errors while working with EC2 instances:
+# Troubleshooting common errors while working with EC2 instances:
 - To make sure you do not face errors with networking part of the EC2 instance, add a security group that allows all incoming and outgoing ip's.
 - If you are facing errors because of memory allocations (related to the free tier), you can minimize the amount of memory required to start the apache zookeeper and apache kafka:
 ```bash
