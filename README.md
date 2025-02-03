@@ -103,4 +103,32 @@ while True:
         producer.send('example_topic',data.encode('utf-8'))
         print("Message sent successfully!")
 ```
+Run the python file on EC2 instance:
+``bash
+python3 producer.py
+```
+You have now successfully set up the producer file.
+
+Next step would be to consume this data that you are sending. In this demo, I'm going to set up the consumer on my local pc.
+
+On your cmd or vscode terminal on local pc, install kafka-python:
+```bash
+pip install kafka-python
+```
+Create a python file to receive the data from the ec2 instance producer:
+```python
+from kafka import KafkaConsumer
+
+consumer = KafkaConsumer(
+    'example_topic',
+    bootstrap_servers = "54.176.118.167",
+    auto_offset_reset = 'earliest',
+    group_id = 'test_group'
+)
+
+print("Waiting for messages...")
+
+for message in consumer:
+    print(f"Received: {message.value.decode('utf-8')}")
+```
 
