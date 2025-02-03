@@ -104,7 +104,7 @@ while True:
         print("Message sent successfully!")
 ```
 Run the python file on EC2 instance:
-``bash
+```bash
 python3 producer.py
 ```
 You have now successfully set up the producer file.
