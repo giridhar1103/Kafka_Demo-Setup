@@ -90,8 +90,17 @@ cd pyfiles
 ```bash
 nano producer.py
 ```
-
+Inside the producer.py file:
 ```python
-hey
+from kafka import KafkaProducer
+
+#to initialize the kafka producer
+producer = KafkaProducer(bootstrap_servers='localhost:9092')
+
+#Create a simple while loop that sends messages one by one
+while True:
+        data = input("Enter the message:")
+        producer.send('example_topic',data.encode('utf-8'))
+        print("Message sent successfully!")
 ```
 
