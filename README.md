@@ -82,6 +82,16 @@ bin/kafka-server-start.sh config/server.properties
 ```
 
 On third session: 
-On the last instance, let's create a simple python producer file that produces/streams data continously.
+On the last instance, let's create a simple python producer file that produces/streams data continously which can be received on a local machine (windows).
+```bash
+mkdir pyfiles
+cd pyfiles
+```
+```bash
+nano producer.py
+```
 
+```python
+hey
+```
 
