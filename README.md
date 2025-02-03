@@ -131,6 +131,7 @@ print("Waiting for messages...")
 for message in consumer:
     print(f"Received: {message.value.decode('utf-8')}")
 ```
+![Alt text](Img/Working_Screenshot.PNG)
 
 #### Troubleshooting common errors while working with EC2 instances:
 - To make sure you do not face errors with networking part of the EC2 instance, add a security group that allows all incoming and outgoing ip's.
