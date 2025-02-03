@@ -44,7 +44,7 @@ Get into the folder that we just extracted:
 ```bash
 cd kafka
 ```
-To edit the server.properties file, you need root access. Which can be done by:
+To edit the server.properties file, you need root access. To gain root access:
 ```bash
 sudo su
 ```
@@ -69,7 +69,17 @@ An alternative to this would be, using the Elastic IP address which remains cons
 
 Now, to start using kafka, we must start kafka's dependency. You need 3 different sessions open at the same time. First session for running zookeeper, second for running kafka server and third for running your python scripts.
 
+On First session:
 For running Zookeeper: (make sure you have root access and you are in the kafka dir)
 ```bash
 bin/zookeeper-server-start.sh config/zookeeper.properties
 ```
+On second session: Create another session of the same EC2 instance
+For running kafka server: (make sure you have root access and you are in the kafka dir)
+```bash
+bin/kafka-server-start.sh config/server.properties
+```
+
+On third instance: On the last instance, let's create a simple python producer file that produces/streams data continously.
+
+
