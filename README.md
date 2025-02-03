@@ -121,7 +121,7 @@ from kafka import KafkaConsumer
 
 consumer = KafkaConsumer(
     'example_topic',
-    bootstrap_servers = "54.176.118.167",
+    bootstrap_servers = "<your-ec2-ip-address>",
     auto_offset_reset = 'earliest',
     group_id = 'test_group'
 )
@@ -130,5 +130,16 @@ print("Waiting for messages...")
 
 for message in consumer:
     print(f"Received: {message.value.decode('utf-8')}")
+```
+
+Troubleshooting common errors while working with EC2 instances:
+- To make sure you do not face errors with networking part of the EC2 instance, add a security group that allows all incoming and outgoing ip's.
+- If you are facing errors because of memory allocations (related to the free tier), you can minimize the amount of memory required to start the apache zookeeper and apache kafka:
+```bash
+nano bin/kafka-server-start.sh
+```
+Find the "KAFKA_HEAP_OPTS" and change the values to:
+```bash
+export KAFKA_HEAP_OPTS="-Xmx512M -Xms256M"
 ```
 
