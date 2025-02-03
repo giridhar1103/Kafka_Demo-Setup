@@ -38,7 +38,7 @@ Then extract it
 tar -xvzf kafka_2.13-3.8.0.tgz
 ```
 ```bash 
-mv kafka_2.13-3.5.0 kafka
+mv kafka_2.13-3.8.0 kafka
 ```
 Get into the folder that we just extracted:
 ```bash
