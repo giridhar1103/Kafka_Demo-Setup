@@ -74,12 +74,14 @@ For running Zookeeper: (make sure you have root access and you are in the kafka 
 ```bash
 bin/zookeeper-server-start.sh config/zookeeper.properties
 ```
-On second session: Create another session of the same EC2 instance
+On second session:
+Create another session of the same EC2 instance
 For running kafka server: (make sure you have root access and you are in the kafka dir)
 ```bash
 bin/kafka-server-start.sh config/server.properties
 ```
 
-On third instance: On the last instance, let's create a simple python producer file that produces/streams data continously.
+On third session: 
+On the last instance, let's create a simple python producer file that produces/streams data continously.
 
 
