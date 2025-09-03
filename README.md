@@ -148,3 +148,4 @@ export KAFKA_HEAP_OPTS="-Xmx512M -Xms256M"
 ![Alt text](Img/memory_Setting.PNG)
 
 Save the file and re run the kafka server and it should work perfectly fine.
+
